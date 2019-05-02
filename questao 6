@@ -1,0 +1,40 @@
+Agua = c(36.7,38.5,38.7,38.3,37.6,37.2,38.2,38.0,37.2,37.8,38.0,38.2)
+OleoA = c(36.0,36.4,35.3,36.8,36.9,37.5,35.3,36.0,35.7,36.1,37.0)
+OleoB = c(35.3,35.0,34.3,35.7,35.2,35.4,36.5,35.6,35.5,35.5,35.4)
+
+media_Agua = mean(Agua)
+mediana_Agua = median(Agua)
+amplitude_Agua = max(Agua)-min(Agua)
+desvio_Agua = sd(Agua)
+coeficiente_Agua = sd(Agua)/mean(Agua)*100
+q1_Agua = 38.7+0.75*(38.3-38.7)
+q3_Agua = 37.2+0.25*(37.8-37.2)
+min_max_Agua = range(Agua)
+bp1 = c(min(Agua),q1_Agua,
+	mediana_Agua,q3_Agua,
+	max(Agua),
+
+media_OleoA = mean(OleoA)
+mediana_OleoA = median(OleoA)
+amplitude_OleoA = max(OleoA)-min(OleoA)
+desvio_OleoA = sd(OleoA)
+coeficiente_OleoA = sd(OleoA)/mean(OleoA)*100
+q1_OleoA = 35.3+0.75*(36.8-35.3)
+q3_OleoA = 35.7+0.25*(36.1-35.7)
+min_max_OleoA = range(OleoA)
+
+media_OleoB = mean(OleoB)
+mediana_OleoB = median(OleoB)
+amplitude_OleoB = max(OleoB)-min(OleoB)
+desvio_OleoB = sd(OleoB)
+coeficiente_OleoB = sd(OleoB)/mean(OleoB)*100
+q1_OleoB = 38.7+0.75*(38.3-38.7)
+q3_OleoB = 37.2+0.25*(37.8-37.2)
+min_max_OleoB = range(OleoB)
+
+par(mfrow=c(1,1))
+
+valores = c(min(Agua),,OleoB)
+boxplot(valores)
+
+# Generate three vectors
